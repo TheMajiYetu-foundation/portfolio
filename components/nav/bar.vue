@@ -9,16 +9,10 @@
       <div class="flex-none">
         <ul class="menu menu-horizontal px-1">
           <li><a>Link</a></li>
-          <li>
-            <details>
-              <summary>
-                Parent
-              </summary>
-              <ul class="p-2 bg-base-100">
-                <li><a>Link 1</a></li>
-                <li><a>Link 2</a></li>
-              </ul>
-            </details>
+          <li v-for="link in links" :key='link.path'>
+            <NuxtLink :to="link.path">
+                {{ link.title }}
+            </NuxtLink>
           </li>
         </ul>
       </div>
@@ -27,7 +21,20 @@
 </template>
 
 <script setup lang="ts">
-
+const links = [
+    {
+        title:"Home",
+        path:'/'
+    },
+     {
+        title: "About",
+        path: ''
+    },
+     {
+        title: "Project",
+        path: ''
+    }
+]
 
 </script>
 

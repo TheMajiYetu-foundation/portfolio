@@ -11,7 +11,7 @@
           <li><a>Link</a></li>
           <li v-for="link in links" :key='link.path'>
             <NuxtLink :to="link.path">
-                {{ link.title }}
+                <p class="text-xl text-white font-semibold font-serif">{{ link.title }}</p>
             </NuxtLink>
           </li>
         </ul>
@@ -32,6 +32,10 @@ const links = [
     },
      {
         title: "Project",
+        path: ''
+    },
+    {
+        title: "Donate",
         path: ''
     }
 ]

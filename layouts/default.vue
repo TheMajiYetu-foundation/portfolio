@@ -12,6 +12,6 @@
 
 <style scoped>
 .image{
-    background-image: url('');
+    background-image: url('assets/images/frame1.jpg');
 }
 </style>

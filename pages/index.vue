@@ -1,7 +1,14 @@
 <template>
-    <div class="flex justify-center flex-col mt-auto mb-auto items-center h-[calc(100%-5rem)]">
-        <h3 class="text-white text-5xl font-serif font-semibold">This website is under maintenance</h3>
-        <h3 class="text-white text-5xl font-serif font-semibold">Sorry for inconvenience</h3>
+    <div>
+        <SectionsHero/>
+        <div class="pt-10">
+            <h3 class="text-4xl text-center text-white">Our Team</h3>
+        </div>
+        <div class="grid grid-cols-3 gap-x-20 gap-y-16 px-6 py-6">
+            <div v-for="person in teams" :key="person.name">
+                <UserCard :name="person.name" :description="person.description" />
+            </div>
+        </div>
     </div>
 </template>
 
@@ -12,6 +19,21 @@ definePageMeta({
     title: 'landing'
 
 });
+
+const teams = ref([
+    {
+        name:'Grace Muthoni',
+        description:'Full stack developer, Cloud practitioner,Data analyst'
+    },
+    {
+        name:'Mulati Brian',
+        description:'Full stack developer, Cloud practitioner,Data analyst'
+    },
+    {
+        name:'Grace Muthoni',
+        description:'Full stack developer, Cloud practitioner,Data analyst'
+    }
+])
 </script>
 
 <style scoped></style>

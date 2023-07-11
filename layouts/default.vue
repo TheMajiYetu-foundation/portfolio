@@ -1,5 +1,5 @@
 <template>
-    <div class="h-screen w-screen bg-blue-200 image">
+    <div class="h-fit w-screen bg-blue-200 image">
         <NavBar/>
 
         <slot/>
